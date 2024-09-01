@@ -1,18 +1,20 @@
 # function to add numbers
 def add_numbers(num1, num2):
     return num1 + num2
-# add_numbers(2,2)
+print(add_numbers(3, 5)) #output should be 8
 
 
 # function to check if a number is even
 def is_even(num):
     return num % 2 == 0
-    # print("true")
-    # elif print("false")
+print(is_even(4))  # Output: True
+print(is_even(7))  # Output: False
+
 
 # function to reverse a string
 def reverse_string(text):
     return text[::-1]
+print(reverse_string("hello"))
 
 # function to count vowels
 def count_vowels(text):
@@ -22,6 +24,7 @@ def count_vowels(text):
         if char in vowels:
             count += 1
     return count
+print(count_vowels("Larry Mecha"))
 
 # function to calculate fuctoral
 def calculate_factorial(n):
@@ -31,6 +34,7 @@ def calculate_factorial(n):
     for i in range(1, n + 1):
         factorial *= i
     return factorial
+print(calculate_factorial(9))
 
 # function to apply decorator
 def decorator_func(func):
@@ -45,10 +49,13 @@ def sample_function():
 
 def apply_decorator(func):
     return decorator_func(func)
+sample_function()
 
 # function to sort a list of tuples by age in ascending order
 def sort_by_age(list_of_tuples):
     return sorted(list_of_tuples, key=lambda x: x[1])
+people = [("Stella", 30), ("Snappy", 25), ("Osir", 24)]
+print(sort_by_age(people))
 
 # function to take 2 dictionaries/objects as input and merges them and common keys to be summed up
 def merge_dicts(dict1, dict2):
@@ -59,6 +66,9 @@ def merge_dicts(dict1, dict2):
         else:
             merged_dict[key] = value
     return merged_dict
+dict1 = {"a": 1, "b": 2}
+dict2 = {"b": 3, "c": 4}
+print(merge_dicts(dict1, dict2)) 
 
 # function that prints out a car's information
 class Car:
@@ -71,3 +81,7 @@ class Car:
         print(f"Car Make: {self.make}")
         print(f"Car Model: {self.model}")
         print(f"Car Year: {self.year}")
+        
+        # run the block
+my_car = Car("Rolls Royce", "Cullinan", 2025)
+my_car.display_info()
